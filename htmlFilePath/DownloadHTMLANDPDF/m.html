@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>/*<![CDATA[*/
+* { box-sizing: border-box; } body {margin: 0;}*{box-sizing:border-box;}body{margin:0;}.navbar-div .hamburger-menu{display:none !important;text-align:right;font-size:30px;padding:10px;color:#472e90;cursor:pointer;}.json-table-container{min-height:100px;padding:10px 0 10px 0;width:100%;margin:10px 0;}.json-table-wrapper{font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;width:100%;overflow-x:visible;overflow-y:visible;}.json-table-wrapper .dataTables_wrapper{overflow-x:auto;overflow-y:visible;}.json-data-table{width:100%;table-layout:fixed;border-collapse:collapse;border:2px solid #000;}.cell-content[contenteditable="true"]{text-align:left !important;}td[data-highlighted="true"], th[data-highlighted="true"]{position:relative;box-sizing:border-box !important;border:1px solid #000 !important;-webkit-print-color-adjust:exact !important;color-adjust:exact !important;print-color-adjust:exact !important;}td[data-highlighted="true"]::after, th[data-highlighted="true"]::after{content:"★";position:absolute;top:2px;right:2px;font-size:10px;color:#ff6b35;font-weight:bold;z-index:1;}.running-total-column .cell-content{color:#1976d2 !important;font-family:'Courier New', monospace !important;}#id3i{width:794px;height:1123px;margin:0px 0px 0px 0px;position:relative;overflow:hidden;background-color:#ffffff;display:flex;flex-direction:column;box-sizing:border-box;border:1px dashed #dee2e6;-webkit-print-color-adjust:exact;color-adjust:exact;print-color-adjust:exact;}#ifdi{width:100%;height:48px;flex-shrink:0;}#inbt{flex:1;display:flex;flex-direction:column;height:1027px;}#i31y{width:100%;height:100%;border:2px dashed transparent;transition:border-color 0.2s ease;overflow:hidden;position:relative;}#i42r{width:100%;height:48px;flex-shrink:0;}#imdf{width:794px;height:1123px;background:#ffffff;margin:20px auto;box-shadow:0 4px 12px rgba(0, 0, 0, 0.15);border:2px solid transparent;position:relative;page-break-after:always;overflow:hidden;box-sizing:border-box;transition:border-color 0.2s ease;-webkit-print-color-adjust:exact;color-adjust:exact;print-color-adjust:exact;}#iz4oh{width:794px;height:1123px;margin:0px 0px 0px 0px;position:relative;overflow:hidden;background-color:#ffffff;display:flex;flex-direction:column;box-sizing:border-box;border:1px dashed #dee2e6;-webkit-print-color-adjust:exact;color-adjust:exact;print-color-adjust:exact;}#i4i5l{width:100%;height:48px;flex-shrink:0;}#ibr5j{flex:1;display:flex;flex-direction:column;height:1027px;}#i1cex{width:100%;height:100%;border:2px dashed transparent;transition:border-color 0.2s ease;overflow:hidden;position:relative;}#ixtzn{width:100%;height:48px;flex-shrink:0;}#iaib{width:794px;height:1123px;background:#ffffff;margin:20px auto;box-shadow:0 4px 12px rgba(0, 0, 0, 0.15);border:2px solid transparent;position:relative;page-break-after:always;overflow:hidden;box-sizing:border-box;transition:border-color 0.2s ease;-webkit-print-color-adjust:exact;color-adjust:exact;print-color-adjust:exact;}#ikw0n{width:794px;height:1123px;margin:0px 0px 0px 0px;position:relative;overflow:hidden;background-color:#ffffff;display:flex;flex-direction:column;box-sizing:border-box;border:1px dashed #dee2e6;-webkit-print-color-adjust:exact;color-adjust:exact;print-color-adjust:exact;}#ik9st{width:100%;height:48px;flex-shrink:0;}#igw4s{flex:1;display:flex;flex-direction:column;height:1027px;}#ifgc7{width:100%;height:100%;border:2px dashed transparent;transition:border-color 0.2s ease;overflow:hidden;position:relative;}#ii19c{width:100%;height:48px;flex-shrink:0;}#ik1g6{width:794px;height:1123px;background:#ffffff;margin:20px auto;box-shadow:0 4px 12px rgba(0, 0, 0, 0.15);border:2px solid transparent;position:relative;page-break-after:always;overflow:hidden;box-sizing:border-box;transition:border-color 0.2s ease;-webkit-print-color-adjust:exact;color-adjust:exact;print-color-adjust:exact;}#ilnle{width:100%;height:100%;display:flex;justify-content:center;align-items:center;border:2px dashed transparent;transition:border-color 0.2s ease;}#idmoi{width:100%;height:100%;display:flex;justify-content:center;align-items:center;border:2px dashed transparent;transition:border-color 0.2s ease;}#imvdh{width:100%;height:100%;display:flex;justify-content:center;align-items:center;border:2px dashed transparent;transition:border-color 0.2s ease;}#iw1j1{width:100%;height:100%;display:flex;justify-content:center;align-items:center;border:2px dashed transparent;transition:border-color 0.2s ease;}#i1g0p{width:100%;height:100%;display:flex;justify-content:center;align-items:center;border:2px dashed transparent;transition:border-color 0.2s ease;}#icm2z{width:100%;height:100%;display:flex;justify-content:center;align-items:center;border:2px dashed transparent;transition:border-color 0.2s ease;}#irhay{padding:10px;json-file-index:2;my-input-json:user1.CUSTOMER_NAME;background-color:#d65252;border:24px dotted black;border-radius:65px 0 0 0;}#iweuj{width:99.5%;}#json-table-c6413{width:100%;border-collapse:collapse;border:1px solid #ddd;font-family:Arial, sans-serif;}#ix6l2{background-color:#f8f9fa;border:1px solid #000;}#json-table-c6413-header-AccountType{padding:8px;border:1px solid #000000ff;font-weight:bold;width:auto;height:100%;text-align:left;box-sizing:border-box;position:relative;}#json-table-c6413-header-Currency{padding:8px;border:1px solid #000000ff;font-weight:bold;width:auto;height:100%;text-align:left;box-sizing:border-box;position:relative;}#json-table-c6413-header-Amount{padding:8px;border:1px solid #000000ff;font-weight:bold;width:auto;height:100%;text-align:left;box-sizing:border-box;position:relative;}#irlvj{background-color:#ffffff;}#json-table-c6413-cell-0-AccountType{padding:8px;border:1px solid #000;position:relative;width:auto;height:100%;box-sizing:border-box;}#json-table-c6413-cell-0-Currency{padding:8px;border:1px solid #000;position:relative;width:auto;height:100%;box-sizing:border-box;}#json-table-c6413-cell-0-Amount{padding:8px;border:1px solid #000;position:relative;width:auto;height:100%;box-sizing:border-box;}#ikwz7{color:black;}#ifvf6{height:350px;}.rect-shape{width:120px;height:80px;background:transparent;border:2px solid #000;border-radius:0;box-sizing:border-box;}.line-shape{width:120px;height:2px;background:#000;padding:0px;border:none;margin:15px;box-sizing:content-box;cursor:pointer;}#izuyv{min-height:50px;min-width:200px;padding:10px;display:block;}#iynie{padding:10px;json-file-index:2;my-input-json:user1.CUSTOMER_NAME;}#iomco{height:114.66668701171875px;width:112.6669694824219px;}.background-music .music-icon{cursor:pointer;display:inline-block;width:40px;height:40px;}.background-music .music-icon::before{font-size:40px;}#ibjmi{width:99.5%;}#json-table-c8362{width:100%;border-collapse:collapse;border:1px solid #ddd;font-family:Arial, sans-serif;}#iqn7w{background-color:#f8f9fa;border:1px solid #000;}#json-table-c8362-colheader-0-0{border:1px solid #000;font-weight:bold;padding:8px;text-align:center;-webkit-print-color-adjust:exact;print-color-adjust:exact;}#json-table-c8362-colheader-0-1{border:1px solid #000;font-weight:bold;padding:8px;text-align:center;-webkit-print-color-adjust:exact;print-color-adjust:exact;}#json-table-c8362-colheader-0-2{border:1px solid #000;font-weight:bold;padding:8px;text-align:center;-webkit-print-color-adjust:exact;print-color-adjust:exact;}#json-table-c8362-colheader-0-3{border:1px solid #000;font-weight:bold;padding:8px;text-align:center;-webkit-print-color-adjust:exact;print-color-adjust:exact;}#json-table-c8362-colheader-1-0{border:1px solid #000;font-weight:bold;padding:8px;text-align:center;-webkit-print-color-adjust:exact;print-color-adjust:exact;}#json-table-c8362-colheader-1-1{border:1px solid #000;font-weight:bold;padding:8px;text-align:center;-webkit-print-color-adjust:exact;print-color-adjust:exact;}#json-table-c8362-colheader-1-2{border:1px solid #000;font-weight:bold;padding:8px;text-align:center;-webkit-print-color-adjust:exact;print-color-adjust:exact;}#json-table-c8362-colheader-1-3{border:1px solid #000;font-weight:bold;padding:8px;text-align:center;-webkit-print-color-adjust:exact;print-color-adjust:exact;}#json-table-c8362-colheader-1-4{border:1px solid #000;font-weight:bold;padding:8px;text-align:center;-webkit-print-color-adjust:exact;print-color-adjust:exact;}#imkup{background-color:#ffffff;}#json-table-c8362-rowheader-0-0{padding:8px;border:1px solid #000;font-weight:bold;background-color:#f8f9fa;}#json-table-c8362-rowheader-0-1{padding:8px;border:1px solid #000;font-weight:bold;background-color:#f8f9fa;}#json-table-c8362-cell-0-0{padding:8px;border:1px solid #000;}#json-table-c8362-cell-0-1{padding:8px;border:1px solid #000;}#json-table-c8362-cell-0-2{padding:8px;border:1px solid #000;}#json-table-c8362-cell-0-3{padding:8px;border:1px solid #000;}#json-table-c8362-cell-0-4{padding:8px;border:1px solid #000;}#json-table-c8362-cell-0-5{padding:8px;border:1px solid #000;}#i40gz5{background-color:#f8f9fa;}#json-table-c8362-rowheader-1-0{padding:8px;border:1px solid #000;font-weight:bold;background-color:#f8f9fa;}#json-table-c8362-cell-1-0{padding:8px;border:1px solid #000;}#json-table-c8362-cell-1-1{padding:8px;border:1px solid #000;}#json-table-c8362-cell-1-2{padding:8px;border:1px solid #000;}#json-table-c8362-cell-1-3{padding:8px;border:1px solid #000;}#json-table-c8362-cell-1-4{padding:8px;border:1px solid #000;}#json-table-c8362-cell-1-5{padding:8px;border:1px solid #000;}#i6xwnj{background-color:#ffffff;}#json-table-c8362-rowheader-2-0{padding:8px;border:1px solid #000;font-weight:bold;background-color:#f8f9fa;}#json-table-c8362-rowheader-2-1{padding:8px;border:1px solid #000;font-weight:bold;background-color:#f8f9fa;}#json-table-c8362-cell-2-0{padding:8px;border:1px solid #000;}#json-table-c8362-cell-2-1{padding:8px;border:1px solid #000;}#json-table-c8362-cell-2-2{padding:8px;border:1px solid #000;}#json-table-c8362-cell-2-3{padding:8px;border:1px solid #000;}#json-table-c8362-cell-2-4{padding:8px;border:1px solid #000;}#json-table-c8362-cell-2-5{padding:8px;border:1px solid #000;}#i9dt8o{background-color:#f8f9fa;}#json-table-c8362-rowheader-3-0{padding:8px;border:1px solid #000;font-weight:bold;background-color:#f8f9fa;}#json-table-c8362-rowheader-3-1{padding:8px;border:1px solid #000;font-weight:bold;background-color:#f8f9fa;}#json-table-c8362-cell-3-0{padding:8px;border:1px solid #000;}#json-table-c8362-cell-3-1{padding:8px;border:1px solid #000;}#json-table-c8362-cell-3-2{padding:8px;border:1px solid #000;}#json-table-c8362-cell-3-3{padding:8px;border:1px solid #000;}#json-table-c8362-cell-3-4{padding:8px;border:1px solid #000;}#json-table-c8362-cell-3-5{padding:8px;border:1px solid #000;}#ie2cj5{background-color:#ffffff;}#json-table-c8362-rowheader-4-0{padding:8px;border:1px solid #000;font-weight:bold;background-color:#f8f9fa;}#json-table-c8362-cell-4-0{padding:8px;border:1px solid #000;}#json-table-c8362-cell-4-1{padding:8px;border:1px solid #000;}#json-table-c8362-cell-4-2{padding:8px;border:1px solid #000;}#json-table-c8362-cell-4-3{padding:8px;border:1px solid #000;}#json-table-c8362-cell-4-4{padding:8px;border:1px solid #000;}#json-table-c8362-cell-4-5{padding:8px;border:1px solid #000;}#i7sje6{background-color:#f8f9fa;}#json-table-c8362-rowheader-5-0{padding:8px;border:1px solid #000;font-weight:bold;background-color:#f8f9fa;}#json-table-c8362-rowheader-5-1{padding:8px;border:1px solid #000;font-weight:bold;background-color:#f8f9fa;}#json-table-c8362-cell-5-0{padding:8px;border:1px solid #000;}#json-table-c8362-cell-5-1{padding:8px;border:1px solid #000;}#json-table-c8362-cell-5-2{padding:8px;border:1px solid #000;}#json-table-c8362-cell-5-3{padding:8px;border:1px solid #000;}#json-table-c8362-cell-5-4{padding:8px;border:1px solid #000;}#json-table-c8362-cell-5-5{padding:8px;border:1px solid #000;}#i6voj{width:213.33334350585938px;height:142px;background-color:#843be2;}#ixdpw8{padding:10px;json-file-index:2;my-input-json:user1.CUSTOMER_ID;}#i5u4h{border:10px groove #c5d121;transform:rotateZ(24deg);}@media (max-width: 991px){.navbar-div .hamburger-menu{display:block !important;}.navbar-div .tab-container, .navbar-div .tab{width:99%;text-align:center;}.navbar-div .tab-container{display:none;}}@media (max-width: 767px){.navbar-div .hamburger-menu{display:block !important;}.navbar-div .tab-container, .navbar-div .tab{width:98%;}.navbar-div .tab-container{display:none;}}
+/*]]>*/</style>
+ </head>
+ <body>
+  <div data-page-id="page-1" data-page-index="0" class="page-container" id="imdf">
+   <div class="page-content" id="id3i">
+    <div data-shared-region="header" data-condition="all" id="ifdi" class="header-wrapper">
+     <div class="page-header-element" id="imvdh"></div>
+    </div>
+    <div class="content-wrapper" id="inbt">
+     <div class="main-content-area" id="i31y">
+      <div id="irhay">
+       sumit
+      </div>
+      <div class="json-table-container" id="injik">
+       <div class="json-table-wrapper" id="iweuj">
+        <table id="json-table-c6413" width="100%" class="json-data-table table table-striped table-bordered">
+         <thead id="ix6l2">
+          <tr>
+           <th id="json-table-c6413-header-AccountType" data-column-key="AccountType" data-gjs-hoverable="true" class="json-table-cell cell-content editable-header">
+            <div style="display: flex; align-items: center; justify-content: flex-start; min-height: 100%; width: 100%;">
+             Account Type
+            </div></th>
+           <th id="json-table-c6413-header-Currency" data-column-key="Currency" data-gjs-hoverable="true" class="json-table-cell cell-content editable-header">
+            <div style="display: flex; align-items: center; justify-content: flex-start; min-height: 100%; width: 100%;">
+             Currency
+            </div></th>
+           <th id="json-table-c6413-header-Amount" data-column-key="Amount" data-gjs-hoverable="true" class="json-table-cell cell-content editable-header">
+            <div style="display: flex; align-items: center; justify-content: flex-start; min-height: 100%; width: 100%;">
+             Amount
+            </div></th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr class="even-row" id="irlvj">
+           <td id="json-table-c6413-cell-0-AccountType" data-row="0" data-column-key="AccountType" data-gjs-hoverable="true" class="json-table-cell cell-content editable-cell">
+            <div style="display: block; align-items: flex-start; justify-content: flex-start; min-height: 100%; width: 100%;">
+             Credit Card
+            </div></td>
+           <td id="json-table-c6413-cell-0-Currency" data-row="0" data-column-key="Currency" data-gjs-hoverable="true" class="json-table-cell cell-content editable-cell">
+            <div style="display: block; align-items: flex-start; justify-content: flex-start; min-height: 100%; width: 100%;">
+             GBP
+            </div></td>
+           <td id="json-table-c6413-cell-0-Amount" data-row="0" data-column-key="Amount" data-gjs-hoverable="true" class="json-table-cell cell-content editable-cell">
+            <div style="display: block; align-items: flex-start; justify-content: flex-start; min-height: 100%; width: 100%;">
+             98.00
+            </div></td>
+          </tr>
+         </tbody>
+        </table>
+        <style>/*<![CDATA[*/
+
+/* Table Styles */
+.json-table-container {
+    min-height: 100px;
+    padding: 10px 0 10px 0;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.json-table-wrapper {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    width: 100%;
+    overflow-x: visible;
+    overflow-y: visible;
+}
+
+/* Only show scroll when actually needed */
+.json-table-wrapper .dataTables_wrapper {
+    overflow-x: auto;
+    overflow-y: visible;
+}
+
+.json-data-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 2px solid #000;
+}
+
+
+/* Formula editing styles */
+.formula-error {
+    background-color: #ffebee !important;
+    color: #c62828 !important;
+}
+/* Apply editing styles to cell-content div */
+.cell-content.editing {
+    background-color: #e3f2fd !important;
+    outline: 2px solid #007bff !important;
+    min-height: inherit;
+    overflow: hidden;
+}
+
+.cell-content[contenteditable="true"] {
+    text-align: left !important;
+}
+td[data-highlighted="true"], th[data-highlighted="true"] {
+    position: relative;
+    box-sizing: border-box !important;
+    border: 1px solid #000 !important;
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+}
+
+td[data-highlighted="true"]::after, th[data-highlighted="true"]::after {
+    content: "★";
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 10px;
+    color: #ff6b35;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.running-total-column {
+    background-color: #f0f8ff !important;
+    font-weight: bold;
+    border-left: 3px solid #007bff !important;
+}
+
+.running-total-column .cell-content {
+    color: #1976d2 !important;
+    font-family: 'Courier New', monospace !important;
+}
+
+        
+/*]]>*/</style>
+        <script type="text/javascript">//<![CDATA[
+
+(function() {
+    function initTable() {
+        if (typeof $ === 'undefined' || typeof $.fn.DataTable === 'undefined') {
+            setTimeout(initTable, 100);
+            return;
+        }
+        
+        const tableElement = document.getElementById('json-table-c6413');
+        if (!tableElement) {
+            setTimeout(initTable, 100);
+            return;
+        }
+        
+        // Store formula data before DataTable initialization
+        const formulaCells = tableElement.querySelectorAll('[data-formula]');
+        const formulaData = Array.from(formulaCells).map(cell => ({
+            cell: cell,
+            formula: cell.getAttribute('data-formula'),
+            calculatedValue: cell.getAttribute('data-calculated-value'),
+            id: cell.id || cell.getAttribute('data-row') + '-' + cell.getAttribute('data-column-key')
+        }));
+        
+        // Destroy existing DataTable if it exists
+        if ($.fn.DataTable.isDataTable(tableElement)) {
+            $(tableElement).DataTable().destroy();
+        }
+        
+        const isInPageSystem = tableElement.closest('.page-container');
+        
+        const dtOptions = {
+            dom: 'Bfrtip',
+            paging: false,
+            info: false,
+            lengthChange: true,
+            pageLength: 10,
+            fixedHeader: false,
+            scrollX: false,
+            fixedColumns: false,
+            searching: false,
+            buttons: [],
+            ordering: false,
+            order: [], 
+            drawCallback: function() {
+                // Restore formula data after DataTable draw
+                setTimeout(() => {
+                    formulaData.forEach(data => {
+                        const cell = document.getElementById(data.id) ||
+                                   tableElement.querySelector('[data-row="' + data.id.split('-')[0] + '"][data-column-key="' + data.id.split('-')[1] + '"]');
+                        if (cell) {
+                            if (data.formula) cell.setAttribute('data-formula', data.formula);
+                            if (data.calculatedValue) {
+                                cell.setAttribute('data-calculated-value', data.calculatedValue);
+                                const cellContent = cell.querySelector('div');
+                                if (cellContent) {
+                                    cellContent.textContent = data.calculatedValue;
+                                }
+                            }
+                        }
+                    });
+                    
+                    // Trigger custom event to re-enable formulas
+                    const event = new CustomEvent('datatableRedrawn', {
+                        detail: { tableId: 'json-table-c6413', formulaData: formulaData }
+                    });
+                    document.dispatchEvent(event);
+                }, 100);
+                
+                if (isInPageSystem) {
+                    const wrapper = this.closest('.dataTables_wrapper');
+                    if (wrapper) {
+                        wrapper.style.maxWidth = '100%';
+                        wrapper.style.overflow = 'hidden';
+                    }
+                }
+            },
+            responsive: isInPageSystem ? {
+                details: {
+                    display: $.fn.dataTable.Responsive.display.childRowImmediate,
+                    type: 'none',
+                    target: ''
+                }
+            } : false
+        };
+    }
+    
+    initTable();
+})();
+
+//]]></script>
+       </div>
+      </div><img id="ikwz7" src="data:image/jpeg;base64,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" /><iframe frameborder="0" id="ifvf6" src="https://maps.google.com/maps?&amp;z=1&amp;t=q&amp;output=embed"></iframe>
+     </div>
+    </div>
+    <div data-shared-region="footer" data-condition="all" id="i42r" class="footer-wrapper">
+     <div class="page-footer-element" id="i1g0p"></div>
+    </div>
+   </div>
+  </div>
+  <div data-page-id="page-2" data-page-index="1" class="page-container" id="iaib">
+   <div class="page-content" id="iz4oh">
+    <div data-shared-region="header" data-condition="all" id="i4i5l" class="header-wrapper">
+     <div class="page-header-element" id="iw1j1"></div>
+    </div>
+    <div class="content-wrapper" id="ibr5j">
+     <div class="main-content-area" id="i1cex">
+      <div class="rect-shape" id="i6voj"></div>
+      <div class="line-shape"></div>
+      <form method="get" id="iyuqp">
+       <div>
+        <label>Name</label><input type="text" />
+       </div>
+       <div>
+        <label>Email</label><input type="email" />
+       </div>
+       <div>
+        <label>Gender</label><input type="checkbox" value="M" /><label>M</label><input type="checkbox" value="F" /><label>F</label>
+       </div>
+       <div>
+        <label>Message</label><textarea></textarea>
+       </div>
+       <div>
+        <button type="button" id="i5u4h">Send</button>
+       </div>
+      </form>
+      <marquee direction="left" scrollamount="6" id="izuyv">
+       <div id="iynie">
+        sumit
+       </div>
+      </marquee>
+      <div id="iomco">
+       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAYAAADj79JYAAADwUlEQVR4AeybUW7bQAxE9Xr/O7cFAtjgLLQUvUtFaSdACo85HFIvBuGf/vrtn1sJ/Dr8cysBA78V93EY+HcDBw6471efF/bO7s6H+b46359wJdKsDbwZsMYbuBJp1inwv19Sj52/1efJZlfz1J/lV+uarzoFrg3WawQMfI1fufsS8HKqG04JlIHD/HsnxPrp5IsFiHkQdXZjL4552SDmw1y/Gi++KAO/mGvbCQEDPwHT9baBd5E9yX0ccL3JundWV//T9OOAPw3Q7n0MfDfRJM/AE0C7y48DDvF7rz4wrNU17279OOB3A7h73j7gd2/+Q+cZ+M1/uDJw/R6c6erzZHlah/lN755fzS8Drw6wPxIw8MijXRl4O+I4IAUO8UbCmo7jRwUxXx0Q63rT1Z9piHmwprN5KfAswPUaAQOv8Vp2G/gywlrAAFxvYrfWdXUexJuqfpjX1a/53VrnD8DVsFc7zcBv/gwY+HcDh9pNhOiHvVpvrPLJ6hD30X7VMPdDrMNca74/4UqkWRt4M2CNN3Al0qy3A9ebmml9PvVX65kf4s1Vf1Xrvqo1bztwHWAdCRh45NGuDLwdcRwwAM9uEMQbqH6I9TjuGP4P6CE/QPBIOZXVfbJAiM+T5UP0a/4AXA3WewkY+F6eaZqBp4j2GgbgEG8QRK3joVbXG6h5VQ3z+TpPtc7TumqozdP8AbgarPcSMPC9PNM0A08R7TUMwPVm6bjVOsQbmOVB9Ff3UT/M8zL/6r4DcB1ovZeAge/lmab9WODpkz3UkALPbla1nvmVU+aHeJMh6mpe5oe1/BS4LmC9RsDA1/iVuw28jGytYQAO8UZBr66uD3Gf1RsPMQ/mWuepzp5nAJ41uL5GwMDX+JW7DbyMbK0hBa43alVX14V4U3U+xHqWr/3q17pqiPMgas1TnQLXBus1Av828DU2Ld0G3oL1PLQMHOLNgrk+H32tojf0Wtfbpf0Q9307v17BvP7lev9bzS8Df4/yq08IGPgn1BZ6DHwB3ietjwcOtZuaQdCbq36tQ22+9mv+44Hrwj9dG/jNf0ED/9+BZzdQ+ahftfoh3mT1Q6xrv2qIfoha/f6EH4qkVxt4L98h3cAHJL1vlIHrzcv06vqaD/MbqfOg5td5qjW/qsvAqwPsjwQMPPJoVwbejjgOSIFDvIGwpuP4UUHMHx3xHZj79Qarjml1pXmqNTEFrg3WawQMfI1fudvAy8jWGgbgeoO6ta6v87J65tf+D/WrbXXeAPyV7BctBAy8Bet5qIGfs2mp/AEAAP//TNO2RwAAAAZJREFUAwDpJPejNnMOyAAAAABJRU5ErkJggg==" alt="QR code for: abc123" id="ibitk" />
+      </div>
+      <div id="i9bfq" src="https://samplelib.com/lib/preview/mp3/sample-6s.mp3" loop="loop" class="background-music">
+       <i class="fas fa-volume-mute music-icon" id="id4tg"></i>
+      </div>
+     </div>
+    </div>
+    <div data-shared-region="footer" data-condition="all" id="ixtzn" class="footer-wrapper">
+     <div class="page-footer-element" id="icm2z"></div>
+    </div>
+   </div>
+  </div>
+  <div data-page-id="page-3" data-page-index="2" class="page-container" id="ik1g6">
+   <div class="page-content" id="ikw0n">
+    <div data-shared-region="header" data-condition="all" id="ik9st" class="header-wrapper">
+     <div class="page-header-element" id="ilnle"></div>
+    </div>
+    <div class="content-wrapper" id="igw4s">
+     <div class="main-content-area" id="ifgc7">
+      <div class="json-table-container" id="isopv">
+       <div class="json-table-wrapper" id="ibjmi">
+        <table id="json-table-c8362" width="100%" class="json-data-table table table-striped table-bordered">
+         <thead id="iqn7w">
+          <tr>
+           <th id="json-table-c8362-colheader-0-0" colspan="2" rowspan="2">
+            <div style=""></div></th>
+           <th id="json-table-c8362-colheader-0-1" colspan="2">
+            <div style="">
+             merged column header 1
+            </div></th>
+           <th id="json-table-c8362-colheader-0-2" colspan="3">
+            <div style="">
+             merged column header 2
+            </div></th>
+           <th id="json-table-c8362-colheader-0-3" rowspan="2">
+            <div style="">
+             merged column header 3
+            </div></th>
+          </tr>
+          <tr>
+           <th id="json-table-c8362-colheader-1-0">
+            <div style="">
+             column header 1
+            </div></th>
+           <th id="json-table-c8362-colheader-1-1">
+            <div style="">
+             column header 2
+            </div></th>
+           <th id="json-table-c8362-colheader-1-2">
+            <div style="">
+             column header 3
+            </div></th>
+           <th id="json-table-c8362-colheader-1-3">
+            <div style="">
+             column header 4
+            </div></th>
+           <th id="json-table-c8362-colheader-1-4">
+            <div style="">
+             column header 5
+            </div></th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr id="imkup">
+           <th id="json-table-c8362-rowheader-0-0" data-row="0" data-column-key="row_header_0" rowspan="2">
+            <div>
+             merged row header 1
+            </div></th>
+           <th id="json-table-c8362-rowheader-0-1" data-row="0" data-column-key="row_header_1">
+            <div>
+             row header 1
+            </div></th>
+           <td id="json-table-c8362-cell-0-0" data-row="0" data-column-key="data_col_0">
+            <div style="text-align: left;">
+             sample row 1 column 1
+            </div></td>
+           <td id="json-table-c8362-cell-0-1" data-row="0" data-column-key="data_col_1">
+            <div style="text-align: left;">
+             sample row 1 column 2
+            </div></td>
+           <td id="json-table-c8362-cell-0-2" data-row="0" data-column-key="data_col_2">
+            <div style="text-align: left;">
+             sample row 1 column 3
+            </div></td>
+           <td id="json-table-c8362-cell-0-3" data-row="0" data-column-key="data_col_3">
+            <div style="text-align: left;">
+             sample row 1 column 4
+            </div></td>
+           <td id="json-table-c8362-cell-0-4" data-row="0" data-column-key="data_col_4">
+            <div style="text-align: left;">
+             sample row 1 column 5
+            </div></td>
+           <td id="json-table-c8362-cell-0-5" data-row="0" data-column-key="data_col_5">
+            <div style="text-align: left;">
+             sample row 1 column 6
+            </div></td>
+          </tr>
+          <tr id="i40gz5">
+           <th id="json-table-c8362-rowheader-1-0" data-row="1" data-column-key="row_header_0">
+            <div>
+             row header 2
+            </div></th>
+           <td id="json-table-c8362-cell-1-0" data-row="1" data-column-key="data_col_0">
+            <div style="text-align: left;">
+             sample row 2 column 1
+            </div></td>
+           <td id="json-table-c8362-cell-1-1" data-row="1" data-column-key="data_col_1">
+            <div style="text-align: left;">
+             sample row 2 column 2
+            </div></td>
+           <td id="json-table-c8362-cell-1-2" data-row="1" data-column-key="data_col_2">
+            <div style="text-align: left;">
+             sample row 2 column 3
+            </div></td>
+           <td id="json-table-c8362-cell-1-3" data-row="1" data-column-key="data_col_3">
+            <div style="text-align: left;">
+             sample row 2 column 4
+            </div></td>
+           <td id="json-table-c8362-cell-1-4" data-row="1" data-column-key="data_col_4">
+            <div style="text-align: left;">
+             sample row 2 column 5
+            </div></td>
+           <td id="json-table-c8362-cell-1-5" data-row="1" data-column-key="data_col_5">
+            <div style="text-align: left;">
+             sample row 2 column 6
+            </div></td>
+          </tr>
+          <tr id="i6xwnj">
+           <th id="json-table-c8362-rowheader-2-0" data-row="2" data-column-key="row_header_0">
+            <div>
+             merged row header 1
+            </div></th>
+           <th id="json-table-c8362-rowheader-2-1" data-row="2" data-column-key="row_header_1">
+            <div>
+             row header 3
+            </div></th>
+           <td id="json-table-c8362-cell-2-0" data-row="2" data-column-key="data_col_0">
+            <div style="text-align: left;">
+             sample row 3 column 1
+            </div></td>
+           <td id="json-table-c8362-cell-2-1" data-row="2" data-column-key="data_col_1">
+            <div style="text-align: left;">
+             sample row 3 column 2
+            </div></td>
+           <td id="json-table-c8362-cell-2-2" data-row="2" data-column-key="data_col_2">
+            <div style="text-align: left;">
+             sample row 3 column 3
+            </div></td>
+           <td id="json-table-c8362-cell-2-3" data-row="2" data-column-key="data_col_3">
+            <div style="text-align: left;">
+             sample row 3 column 4
+            </div></td>
+           <td id="json-table-c8362-cell-2-4" data-row="2" data-column-key="data_col_4">
+            <div style="text-align: left;">
+             sample row 3 column 5
+            </div></td>
+           <td id="json-table-c8362-cell-2-5" data-row="2" data-column-key="data_col_5">
+            <div style="text-align: left;">
+             sample row 3 column 6
+            </div></td>
+          </tr>
+          <tr id="i9dt8o">
+           <th id="json-table-c8362-rowheader-3-0" data-row="3" data-column-key="row_header_0" rowspan="2">
+            <div>
+             merged row header 2
+            </div></th>
+           <th id="json-table-c8362-rowheader-3-1" data-row="3" data-column-key="row_header_1">
+            <div>
+             row header 4
+            </div></th>
+           <td id="json-table-c8362-cell-3-0" data-row="3" data-column-key="data_col_0">
+            <div style="text-align: left;">
+             sample row 4 column 1
+            </div></td>
+           <td id="json-table-c8362-cell-3-1" data-row="3" data-column-key="data_col_1">
+            <div style="text-align: left;">
+             sample row 4 column 2
+            </div></td>
+           <td id="json-table-c8362-cell-3-2" data-row="3" data-column-key="data_col_2">
+            <div style="text-align: left;">
+             sample row 4 column 3
+            </div></td>
+           <td id="json-table-c8362-cell-3-3" data-row="3" data-column-key="data_col_3">
+            <div style="text-align: left;">
+             sample row 4 column 4
+            </div></td>
+           <td id="json-table-c8362-cell-3-4" data-row="3" data-column-key="data_col_4">
+            <div style="text-align: left;">
+             sample row 4 column 5
+            </div></td>
+           <td id="json-table-c8362-cell-3-5" data-row="3" data-column-key="data_col_5">
+            <div style="text-align: left;">
+             sample row 4 column 6
+            </div></td>
+          </tr>
+          <tr id="ie2cj5">
+           <th id="json-table-c8362-rowheader-4-0" data-row="4" data-column-key="row_header_0">
+            <div>
+             row header 5
+            </div></th>
+           <td id="json-table-c8362-cell-4-0" data-row="4" data-column-key="data_col_0">
+            <div style="text-align: left;">
+             sample row 5 column 1
+            </div></td>
+           <td id="json-table-c8362-cell-4-1" data-row="4" data-column-key="data_col_1">
+            <div style="text-align: left;">
+             sample row 5 column 2
+            </div></td>
+           <td id="json-table-c8362-cell-4-2" data-row="4" data-column-key="data_col_2">
+            <div style="text-align: left;">
+             sample row 5 column 3
+            </div></td>
+           <td id="json-table-c8362-cell-4-3" data-row="4" data-column-key="data_col_3">
+            <div style="text-align: left;">
+             sample row 5 column 4
+            </div></td>
+           <td id="json-table-c8362-cell-4-4" data-row="4" data-column-key="data_col_4">
+            <div style="text-align: left;">
+             sample row 5 column 5
+            </div></td>
+           <td id="json-table-c8362-cell-4-5" data-row="4" data-column-key="data_col_5">
+            <div style="text-align: left;">
+             sample row 5 column 6
+            </div></td>
+          </tr>
+          <tr id="i7sje6">
+           <th id="json-table-c8362-rowheader-5-0" data-row="5" data-column-key="row_header_0">
+            <div>
+             merged row header 3
+            </div></th>
+           <th id="json-table-c8362-rowheader-5-1" data-row="5" data-column-key="row_header_1">
+            <div>
+             row header 6
+            </div></th>
+           <td id="json-table-c8362-cell-5-0" data-row="5" data-column-key="data_col_0">
+            <div style="text-align: left;">
+             sample row 6 column 1
+            </div></td>
+           <td id="json-table-c8362-cell-5-1" data-row="5" data-column-key="data_col_1">
+            <div style="text-align: left;">
+             sample row 6 column 2
+            </div></td>
+           <td id="json-table-c8362-cell-5-2" data-row="5" data-column-key="data_col_2">
+            <div style="text-align: left;">
+             sample row 6 column 3
+            </div></td>
+           <td id="json-table-c8362-cell-5-3" data-row="5" data-column-key="data_col_3">
+            <div style="text-align: left;">
+             sample row 6 column 4
+            </div></td>
+           <td id="json-table-c8362-cell-5-4" data-row="5" data-column-key="data_col_4">
+            <div style="text-align: left;">
+             sample row 6 column 5
+            </div></td>
+           <td id="json-table-c8362-cell-5-5" data-row="5" data-column-key="data_col_5">
+            <div style="text-align: left;">
+             sample row 6 column 6
+            </div></td>
+          </tr>
+         </tbody>
+        </table>
+        <style>/*<![CDATA[*/
+
+/* Table Styles */
+.json-table-container {
+    min-height: 100px;
+    padding: 10px 0 10px 0;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.json-table-wrapper {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    width: 100%;
+    overflow-x: visible;
+    overflow-y: visible;
+}
+
+/* Only show scroll when actually needed */
+.json-table-wrapper .dataTables_wrapper {
+    overflow-x: auto;
+    overflow-y: visible;
+}
+
+.json-data-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 2px solid #000;
+}
+
+
+/* Formula editing styles */
+.formula-error {
+    background-color: #ffebee !important;
+    color: #c62828 !important;
+}
+/* Apply editing styles to cell-content div */
+.cell-content.editing {
+    background-color: #e3f2fd !important;
+    outline: 2px solid #007bff !important;
+    min-height: inherit;
+    overflow: hidden;
+}
+
+.cell-content[contenteditable="true"] {
+    text-align: left !important;
+}
+td[data-highlighted="true"], th[data-highlighted="true"] {
+    position: relative;
+    box-sizing: border-box !important;
+    border: 1px solid #000 !important;
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+}
+
+td[data-highlighted="true"]::after, th[data-highlighted="true"]::after {
+    content: "★";
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 10px;
+    color: #ff6b35;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.running-total-column {
+    background-color: #f0f8ff !important;
+    font-weight: bold;
+    border-left: 3px solid #007bff !important;
+}
+
+.running-total-column .cell-content {
+    color: #1976d2 !important;
+    font-family: 'Courier New', monospace !important;
+}
+
+        
+/*]]>*/</style>
+        <script type="text/javascript">//<![CDATA[
+
+(function() {
+    function initTable() {
+        if (typeof $ === 'undefined' || typeof $.fn.DataTable === 'undefined') {
+            setTimeout(initTable, 100);
+            return;
+        }
+        
+        const tableElement = document.getElementById('json-table-c8362');
+        if (!tableElement) {
+            setTimeout(initTable, 100);
+            return;
+        }
+        
+        // Store formula data before DataTable initialization
+        const formulaCells = tableElement.querySelectorAll('[data-formula]');
+        const formulaData = Array.from(formulaCells).map(cell => ({
+            cell: cell,
+            formula: cell.getAttribute('data-formula'),
+            calculatedValue: cell.getAttribute('data-calculated-value'),
+            id: cell.id || cell.getAttribute('data-row') + '-' + cell.getAttribute('data-column-key')
+        }));
+        
+        // Destroy existing DataTable if it exists
+        if ($.fn.DataTable.isDataTable(tableElement)) {
+            $(tableElement).DataTable().destroy();
+        }
+        
+        const isInPageSystem = tableElement.closest('.page-container');
+        
+        const dtOptions = {
+            dom: 'Bfrtip',
+            paging: false,
+            info: false,
+            lengthChange: true,
+            pageLength: 10,
+            fixedHeader: false,
+            scrollX: true,
+            fixedColumns: true,
+            searching: false,
+            buttons: [],
+            ordering: false,
+            order: [], 
+            drawCallback: function() {
+                // Restore formula data after DataTable draw
+                setTimeout(() => {
+                    formulaData.forEach(data => {
+                        const cell = document.getElementById(data.id) ||
+                                   tableElement.querySelector('[data-row="' + data.id.split('-')[0] + '"][data-column-key="' + data.id.split('-')[1] + '"]');
+                        if (cell) {
+                            if (data.formula) cell.setAttribute('data-formula', data.formula);
+                            if (data.calculatedValue) {
+                                cell.setAttribute('data-calculated-value', data.calculatedValue);
+                                const cellContent = cell.querySelector('div');
+                                if (cellContent) {
+                                    cellContent.textContent = data.calculatedValue;
+                                }
+                            }
+                        }
+                    });
+                    
+                    // Trigger custom event to re-enable formulas
+                    const event = new CustomEvent('datatableRedrawn', {
+                        detail: { tableId: 'json-table-c8362', formulaData: formulaData }
+                    });
+                    document.dispatchEvent(event);
+                }, 100);
+                
+                if (isInPageSystem) {
+                    const wrapper = this.closest('.dataTables_wrapper');
+                    if (wrapper) {
+                        wrapper.style.maxWidth = '100%';
+                        wrapper.style.overflow = 'hidden';
+                    }
+                }
+            },
+            responsive: isInPageSystem ? {
+                details: {
+                    display: $.fn.dataTable.Responsive.display.childRowImmediate,
+                    type: 'none',
+                    target: ''
+                }
+            } : false
+        };
+    }
+    
+    initTable();
+})();
+
+//]]></script>
+       </div>
+      </div>
+      <div id="ixdpw8">
+       9999000001
+      </div>
+     </div>
+    </div>
+    <div data-shared-region="footer" data-condition="all" id="ii19c" class="footer-wrapper">
+     <div class="page-footer-element" id="idmoi"></div>
+    </div>
+   </div>
+  </div>
+  <script>//<![CDATA[
+var items = document.querySelectorAll('#iomco');
+          for (var i = 0, len = items.length; i < len; i++) {
+            (function(){
+// optional inline script
+}.bind(items[i]))();
+          }
+          var items = document.querySelectorAll('#i9bfq');
+          for (var i = 0, len = items.length; i < len; i++) {
+            (function(){
+const el = this;
+          let audio;
+          let isPlaying = false;
+
+          function togglePlay() {
+            const src = el.getAttribute('src');
+            const loop = el.getAttribute('loop');
+            const icon = el.querySelector('.music-icon');
+
+            if (!src) {
+              alert('No audio link provided!');
+              return;
+            }
+
+            if (!audio) {
+              audio = new Audio(src);
+              audio.loop = !!loop;
+            }
+
+            if (isPlaying) {
+              audio.pause();
+              icon.classList.remove('fa-volume-up');
+              icon.classList.add('fa-volume-mute');
+            } else {
+              audio.play();
+              icon.classList.remove('fa-volume-mute');
+              icon.classList.add('fa-volume-up');
+            }
+
+            isPlaying = !isPlaying;
+          }
+
+          const icon = el.querySelector('.music-icon');
+          if (icon) {
+            icon.addEventListener('click', togglePlay);
+
+            const styleTag = document.createElement('style');
+            document.head.appendChild(styleTag);
+
+            const resizeObserver = new ResizeObserver(entries => {
+              for (let entry of entries) {
+                const { width, height } = entry.contentRect;
+                const newSize = Math.min(width, height); 
+                styleTag.textContent = `
+                  .background-music .music-icon::before {
+                    font-size: ${newSize}px !important;
+                  }
+                `;
+              }
+            });
+            resizeObserver.observe(icon);
+          }
+}.bind(items[i]))();
+          }
+//]]></script>
+ </body>
+</html>
